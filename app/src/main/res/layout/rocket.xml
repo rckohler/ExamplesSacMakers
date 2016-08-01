@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thrusters"
+        android:id="@+id/textView5"
+        android:textSize="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t_thrusters"
+        android:textSize="30dp"
+        android:paddingRight="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:backgroundTint="#731111"
+        android:layout_alignParentRight="true"
+        android:inputType="number"
+        android:layout_alignParentEnd="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fuel"
+        android:id="@+id/textView7"
+        android:textSize="40dp"
+        android:elegantTextHeight="false"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t_fuel"
+        android:textSize="30dp"
+        android:paddingRight="20dp"
+        android:layout_alignTop="@+id/textView7"
+        android:inputType="number"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_toRightOf="@+id/textView5"
+        android:layout_toEndOf="@+id/textView5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chassis"
+        android:id="@+id/textView9"
+        android:textSize="40dp"
+
+        android:layout_below="@+id/textView7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t_chassis"
+        android:textSize="30dp"
+        android:paddingRight="20dp"
+        android:layout_below="@+id/t_fuel"
+        android:inputType="number"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/t_fuel"
+        android:layout_alignStart="@+id/t_fuel"
+        android:layout_alignBottom="@+id/textView9" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t_outcome"
+        android:textSize="20dp"
+        android:layout_below="@+id/b_calculateRocket"
+        android:layout_alignLeft="@+id/t_safetyMargin"
+        android:layout_alignStart="@+id/t_safetyMargin"
+        android:layout_toStartOf="@+id/t_safetyMargin"
+        android:layout_alignRight="@+id/t_safetyMargin"
+        android:layout_alignEnd="@+id/t_safetyMargin"
+        android:textAlignment="viewStart"
+        android:minWidth="380dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t_safetyMargin"
+        android:textSize="20dp"
+
+        android:layout_below="@+id/t_outcome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="viewStart"
+        android:minWidth="380dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/t_maxVelocity"
+        android:textSize="20dp"
+        android:layout_below="@+id/t_safetyMargin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/t_safetyMargin"
+        android:layout_alignEnd="@+id/t_safetyMargin"
+        android:textAlignment="viewStart"
+        android:minWidth="380dp" />
+
+    <Button
+        android:text="Calculate"
+        android:id="@+id/b_calculateRocket"
+        android:layout_column="12"
+        android:clickable="true"
+        android:onClick="calculateRocket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/t_chassis"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="166dp"
+        android:layout_height="wrap_content"
+        android:text="Back to Main Menu"
+        android:id="@+id/button3"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:onClick="backToMain"
+        android:nestedScrollingEnabled="true"
+        android:layout_below="@+id/t_maxVelocity"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="86dp" />
+</RelativeLayout>
